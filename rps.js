@@ -23,35 +23,47 @@
     return choice;
 }
 
+function game(){
+    for (let i = 0; i<5; i++){
+       let playerChoice = prompt("rock, paper or scissors?");
+
+
+        gameRun(playerChoice,getComputerChoice());
+
+    }
+
+}
 function gameRun(playerSelection,computerSelection){
-    console.log("Player choice: " +playerSelection);
+    
+    lowerPlayerSelection = playerSelection.toLowerCase();
+    console.log("Player choice: " +lowerPlayerSelection);
     console.log("Computer choice: "+computerSelection);
-    if(playerSelection =="rock" && computerSelection == "rock")
+    if(lowerPlayerSelection =="rock" && computerSelection == "rock")
     {   console.log("It's a tie!");
 
     }
-    else if(playerSelection =="rock" && computerSelection == "paper"){
+    else if(lowerPlayerSelection =="rock" && computerSelection == "paper"){
         console.log("You lose!")
     }
-    else if(playerSelection =="rock" && computerSelection == "scissors"){
+    else if(lowerPlayerSelection =="rock" && computerSelection == "scissors"){
         console.log("You win!")
     }
-    else if(playerSelection =="paper" && computerSelection =="rock"){
+    else if(lowerPlayerSelection =="paper" && computerSelection =="rock"){
         console.log("You win!")
     }
-    else if(playerSelection =="paper" && computerSelection =="paper"){
+    else if(lowerPlayerSelection =="paper" && computerSelection =="paper"){
         console.log("It's a tie!")
     }
-    else if(playerSelection =="paper" && computerSelection =="scissors"){
+    else if(lowerPlayerSelection =="paper" && computerSelection =="scissors"){
         console.log("You lose!")
     }
-    else if(playerSelection =="scissors" && computerSelection =="rock"){
+    else if(lowerPlayerSelection =="scissors" && computerSelection =="rock"){
         console.log("You lose!")
     }
-    else if(playerSelection =="scissors" && computerSelection =="paper"){
+    else if(lowerPlayerSelection =="scissors" && computerSelection =="paper"){
         console.log("You win!")
     }
-    else if(playerSelection =="scissors" && computerSelection =="scissors"){
+    else if(lowerPlayerSelection =="scissors" && computerSelection =="scissors"){
         console.log("It's a tie!")
     }
    
@@ -59,8 +71,7 @@ function gameRun(playerSelection,computerSelection){
 
 }
 
+
 //write a function that plays a round of rock paper scissors
-//alert("Hello");
+game();
 
-
-gameRun("rock",getComputerChoice());
