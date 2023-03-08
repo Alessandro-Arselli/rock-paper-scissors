@@ -30,8 +30,29 @@ function gameRun(playerSelection,computerSelection){
     {   console.log("It's a tie!");
 
     }
-    if(playerSelection =="rock" && computerSelection == "paper"){
+    else if(playerSelection =="rock" && computerSelection == "paper"){
         console.log("You lose!")
+    }
+    else if(playerSelection =="rock" && computerSelection == "scissors"){
+        console.log("You win!")
+    }
+    else if(playerSelection =="paper" && computerSelection =="rock"){
+        console.log("You win!")
+    }
+    else if(playerSelection =="paper" && computerSelection =="paper"){
+        console.log("It's a tie!")
+    }
+    else if(playerSelection =="paper" && computerSelection =="scissors"){
+        console.log("You lose!")
+    }
+    else if(playerSelection =="scissors" && computerSelection =="rock"){
+        console.log("You lose!")
+    }
+    else if(playerSelection =="scissors" && computerSelection =="paper"){
+        console.log("You win!")
+    }
+    else if(playerSelection =="scissors" && computerSelection =="scissors"){
+        console.log("It's a tie!")
     }
    
     
