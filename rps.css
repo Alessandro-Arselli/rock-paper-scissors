@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(58, 49, 63);
+}
+h1{
+    color: rgb(195, 108, 108);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.choicesBox{
+    display: flex;
+  
+
+}
+.choices{
+    color: rgb(106, 154, 196);
+    font-size: 30px;
+    margin-left:100px ;
+    margin-right:100px ;
+  
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.scores{
+    color: rgb(246, 238, 25);
+    font-size: 30px;
+ 
+  
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
