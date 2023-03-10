@@ -33,7 +33,8 @@ return choice;
 }
 
 function buttonText(button){
-    const buttonTxt = button.textContent;
+    const buttonTxt = button.className;
+    console.log(buttonTxt)
     
 
     return buttonTxt;
