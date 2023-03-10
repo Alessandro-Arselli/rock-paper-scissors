@@ -2,7 +2,7 @@ body{
     background-color: rgb(58, 49, 63);
 }
 h1{
-    color: rgb(195, 108, 108);
+    color: rgb(255, 0, 238);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 .choicesBox{
@@ -11,10 +11,11 @@ h1{
 
 }
 .choices{
-    color: rgb(106, 154, 196);
+    color: rgb(69, 252, 255);
     font-size: 30px;
     margin-left:100px ;
     margin-right:100px ;
+    padding-right: 100px;
   
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -25,4 +26,13 @@ h1{
   
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
+}
+#winMessage{
+    color: rgb(220, 49, 194);
+    margin-left: 450px;
+    font-size: 30px;
+ 
+  
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
 }

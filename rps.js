@@ -1,6 +1,10 @@
 let playerSelectionDiv = document.querySelector('#playerChoice');
 let computerSelectionDiv =document.querySelector('#computerChoice');
- 
+let winMessageDiv = document.querySelector('#winMessage');
+let playerScoreDiv = document.querySelector('#playerScore');
+let computerScoreDiv = document.querySelector('#computerScore');
+let playerScore =0;
+let computerScore =0;
  
  //get the computers choice, randomly return rock paper or scisssors
  
@@ -31,7 +35,7 @@ return choice;
 function buttonText(button){
     const buttonTxt = button.textContent;
     
-    console.log(`The button text is: ${buttonTxt}`);
+
     return buttonTxt;
      
 };
@@ -72,41 +76,67 @@ buttons.forEach(button => {
 function gameRun(playerSelection,computerSelection){
     
     lowerPlayerSelection = playerSelection.toLowerCase();
-    playerSelectionDiv.innerText = "Your choice: " + playerSelection;
-   
-
-
-    console.log("Player choice: " +lowerPlayerSelection);
+    playerSelectionDiv.innerText = "Your choice: " + playerSelection; 
     computerSelectionDiv.innerText = "Computer's choice: " + computerSelection;
+    
 
-    console.log("Computer choice: "+computerSelection);
     if(lowerPlayerSelection =="rock" && computerSelection == "Rock")
-    {   console.log("It's a tie!");
+    {  
+        winMessageDiv.innerText = "It's a tie!";
+    
 
     }
     else if(lowerPlayerSelection =="rock" && computerSelection == "Paper"){
-        console.log("You lose!")
+
+        winMessageDiv.innerText = "You lose!";
+        computerScore +=1;      
+        computerScoreDiv.innerText= "Computer: " + computerScore;
+
+    
     }
     else if(lowerPlayerSelection =="rock" && computerSelection == "Scissors"){
-        console.log("You win!")
+
+        winMessageDiv.innerText = "You win!";
+        playerScore +=1
+        playerScoreDiv.innerText = "Player: " + playerScore;
+    
     }
     else if(lowerPlayerSelection =="paper" && computerSelection =="Rock"){
-        console.log("You win!")
+
+        winMessageDiv.innerText = "You win!";
+        playerScore +=1
+        playerScoreDiv.innerText = "Player: " + playerScore;
+       
     }
     else if(lowerPlayerSelection =="paper" && computerSelection =="Paper"){
-        console.log("It's a tie!")
+        winMessageDiv.innerText = "It's a tie!";
+      
     }
     else if(lowerPlayerSelection =="paper" && computerSelection =="Scissors"){
-        console.log("You lose!")
+
+        winMessageDiv.innerText = "You lose!";
+        computerScore +=1;
+        computerScoreDiv.innerText= "Computer: " + computerScore;
+
+      
     }
     else if(lowerPlayerSelection =="scissors" && computerSelection =="Rock"){
-        console.log("You lose!")
+
+        winMessageDiv.innerText = "You lose!";
+        computerScore +=1;
+        computerScoreDiv.innerText= "Computer: " + computerScore;
+
     }
     else if(lowerPlayerSelection =="scissors" && computerSelection =="Paper"){
-        console.log("You win!")
+
+        winMessageDiv.innerText = "You win!";
+        playerScore +=1
+        playerScoreDiv.innerText = "Player: " + playerScore;
+     
     }
     else if(lowerPlayerSelection =="scissors" && computerSelection =="Scissors"){
-        console.log("It's a tie!")
+        winMessageDiv.innerText = "It's a tie!";
+      
     }
    
     
