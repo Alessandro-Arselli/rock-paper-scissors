@@ -19,8 +19,10 @@ h1{
 .selectionBox{
    
     display: flex;
-    margin-bottom: 100px;
+    max-height: 200px;
     justify-content: space-evenly;
+    padding-bottom: 100px;
+  
   
 }
 .choicesBox{
@@ -39,6 +41,7 @@ h1{
     width: 200px;
     height: 200px;
     cursor: pointer;
+    align-self: center;
    
 
 }
@@ -52,9 +55,16 @@ h1{
    
 }
 
-.rock-img:hover{
-    opacity: 0.8;
+#btn:hover{
+    opacity: 1;
+    transition: 100ms;
+
+    transform: scale(1.2);
+    transform-origin: center;
     
+}
+#btn:active{
+    opacity: 0.9;
 }
 .choices{
     color: #08e4d4;
