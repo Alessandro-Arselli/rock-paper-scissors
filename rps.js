@@ -1,4 +1,6 @@
 let playerSelectionDiv = document.querySelector('#playerChoice');
+let playerSelectionImg = document.querySelector('#playerChoiceImg');
+let computerSelectionImg = document.querySelector('#computerChoiceImg')
 let computerSelectionDiv =document.querySelector('#computerChoice');
 let winMessageDiv = document.querySelector('#winMessage');
 let playerScoreDiv = document.querySelector('#playerScore');
@@ -77,18 +79,22 @@ buttons.forEach(button => {
 function gameRun(playerSelection,computerSelection){
     
     lowerPlayerSelection = playerSelection.toLowerCase();
-    playerSelectionDiv.innerText = "Your choice: " + playerSelection; 
-    computerSelectionDiv.innerText = "Computer's choice: " + computerSelection;
+    //playerSelectionDiv.innerText = "Your choice: " + playerSelection; 
+
+    
+    //computerSelectionDiv.innerText = "Computer's choice: " + computerSelection;
     
 
     if(lowerPlayerSelection =="rock" && computerSelection == "Rock")
     {  
         winMessageDiv.innerText = "It's a tie!";
-    
-
+        playerSelectionImg.src = "rock.png"
+        computerSelectionImg.src = "rock.png";
     }
     else if(lowerPlayerSelection =="rock" && computerSelection == "Paper"){
 
+        playerSelectionImg.src = "rock.png";
+        computerSelectionImg.src = "paper.png";
         winMessageDiv.innerText = "You lose!";
         computerScore +=1;      
         computerScoreDiv.innerText= "Computer: " + computerScore;
@@ -97,23 +103,33 @@ function gameRun(playerSelection,computerSelection){
     }
     else if(lowerPlayerSelection =="rock" && computerSelection == "Scissors"){
 
+        playerSelectionImg.src = "rock.png"
+        computerSelectionImg.src = "scissors.png";
         winMessageDiv.innerText = "You win!";
         playerScore +=1
         playerScoreDiv.innerText = "Player: " + playerScore;
     
     }
     else if(lowerPlayerSelection =="paper" && computerSelection =="Rock"){
-
+        
+        playerSelectionImg.src = "paper.png"
+        computerSelectionImg.src = "rock.png";
         winMessageDiv.innerText = "You win!";
         playerScore +=1
         playerScoreDiv.innerText = "Player: " + playerScore;
        
     }
     else if(lowerPlayerSelection =="paper" && computerSelection =="Paper"){
+        playerSelectionImg.src = "paper.png"
+        
+        computerSelectionImg.src = "paper.png";
         winMessageDiv.innerText = "It's a tie!";
       
     }
     else if(lowerPlayerSelection =="paper" && computerSelection =="Scissors"){
+
+        playerSelectionImg.src = "paper.png"
+        computerSelectionImg.src = "scissors.png";
 
         winMessageDiv.innerText = "You lose!";
         computerScore +=1;
@@ -123,6 +139,8 @@ function gameRun(playerSelection,computerSelection){
     }
     else if(lowerPlayerSelection =="scissors" && computerSelection =="Rock"){
 
+        playerSelectionImg.src = "scissors.png"
+        computerSelectionImg.src = "rock.png";
         winMessageDiv.innerText = "You lose!";
         computerScore +=1;
         computerScoreDiv.innerText= "Computer: " + computerScore;
@@ -130,12 +148,18 @@ function gameRun(playerSelection,computerSelection){
     }
     else if(lowerPlayerSelection =="scissors" && computerSelection =="Paper"){
 
+        playerSelectionImg.src = "scissors.png"
+        computerSelectionImg.src = "paper.png";
         winMessageDiv.innerText = "You win!";
         playerScore +=1
         playerScoreDiv.innerText = "Player: " + playerScore;
      
     }
     else if(lowerPlayerSelection =="scissors" && computerSelection =="Scissors"){
+
+        playerSelectionImg.src = "scissors.png"
+        computerSelectionImg.src = "scissors.png";
+
         winMessageDiv.innerText = "It's a tie!";
       
     }

@@ -11,22 +11,32 @@
     
     <body>
         <h1>Rock Paper Scissors</h1>
-
-        <button id = 'btn' class ="Rock"><img src="rock.png" class="rock-img" alt=""></button>
-        <button id = 'btn' class ="Paper"><img src="paper.png" class="rock-img" alt=""></button>
-        <button id = 'btn' class="Scissors"><img src="scissors.png" class="rock-img" alt=""></button>
+        <div class="selectionBox">
+          <button id = 'btn' class ="Rock"><img src="rock.png" class="rock-img" alt=""></button>
+          <button id = 'btn' class ="Paper"><img src="paper.png" class="rock-img" alt=""></button>
+          <button id = 'btn' class="Scissors"><img src="scissors.png" class="rock-img" alt=""></button>
+        </div>
+        
 
         <div class="choicesBox">
-            <div class="choices" id="playerChoice">Your choice:</div>
-            <div class="choices" id="computerChoice">Computer's choice:</div>
+
+          <div class="choices" id="playerChoice">
+            <div class="choiceText">You</div>
+           <img id="playerChoiceImg" class="choiceImg" src="unknown-choice.png" alt="">
+          </div>
+          <div class="versusText"> VS </div>
+          <div class="choices" id="computerChoice">
+            <div class="choiceText">Computer</div>
+            <img id="computerChoiceImg" class="choiceImg" src="unknown-choice.png" alt="">
+          </div>
 
         </div>
 
         <div id="winMessage"></div>
 
         <div class="scores">Score
-            <div class="scores" id="playerScore">Player: 0</div>
-            <div class="scores" id="computerScore">Computer: 0</div>
+          <div class="scores" id="playerScore">Player: 0</div>
+          <div class="scores" id="computerScore">Computer: 0</div>
         </div>
 
     </body>
