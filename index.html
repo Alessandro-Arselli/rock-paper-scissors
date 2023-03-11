@@ -12,20 +12,33 @@
     <body>
         <h1>Rock Paper Scissors</h1>
         <div class="selectionBox">
-          <button id = 'btn' class ="Rock"><img src="rock.png" class="rock-img" alt=""></button>
-          <button id = 'btn' class ="Paper"><img src="paper.png" class="rock-img" alt=""></button>
-          <button id = 'btn' class="Scissors"><img src="scissors.png" class="rock-img" alt=""></button>
+
+          <div class="selectionButtonContainer">
+           <img  id = 'btn' src="rock.png" class="Rock" class="rock-img" alt="">
+          </div>
+         
+          <div class="selectionButtonContainer">
+           <img  id = 'btn' src="paper.png" class="Paper" class="rock-img" alt="">
+          </div>
+          
+          <div class="selectionButtonContainer">
+         <img   id = 'btn' src="scissors.png" class="Scissors" class="rock-img" alt="">
+          </div>
+       
+
         </div>
         
 
         <div class="choicesBox">
 
           <div class="choices" id="playerChoice">
+            <div class="scores" id="playerScore">Score:0</div>
             <div class="choiceText">You</div>
            <img id="playerChoiceImg" class="choiceImg" src="unknown-choice.png" alt="">
           </div>
           <div class="versusText"> VS </div>
           <div class="choices" id="computerChoice">
+            <div class="scores" id="computerScore">Score:0</div>
             <div class="choiceText">Computer</div>
             <img id="computerChoiceImg" class="choiceImg" src="unknown-choice.png" alt="">
           </div>
@@ -34,10 +47,7 @@
 
         <div id="winMessage"></div>
 
-        <div class="scores">Score
-          <div class="scores" id="playerScore">Player: 0</div>
-          <div class="scores" id="computerScore">Computer: 0</div>
-        </div>
+  
 
     </body>
 

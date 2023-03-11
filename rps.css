@@ -6,22 +6,22 @@ body{
 h1{
     top:none;
     margin-top: 0px;
-    padding: 50px;
+    padding: 35px;
     color: rgb(225, 78, 215);
     font-family: 'Rubik Mono One', sans-serif;
     font-size: 50px;
     text-align: center;
     background-color: rgb(20, 20, 20);
-    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-width: 1zpx;
     -webkit-text-stroke-color: #231f20;
   
 }
 .selectionBox{
    
     display: flex;
-    margin-bottom: 300px;
+    margin-bottom: 100px;
     justify-content: space-evenly;
-    margin-left: -250px;
+  
 }
 .choicesBox{
 
@@ -30,20 +30,16 @@ h1{
   
 
 }
+.selectionButtonContainer{
+    width:200px
+}
 #btn{   
-    margin-left: 30px;
-    margin-right:30px;
-    color: transparent;
-    width: 0px;
-    height: 0px;
+
+  border-radius: 50%;
+    width: 200px;
+    height: 200px;
     cursor: pointer;
-    appearance: none;
-    background-color: transparent;
-    border: none;
    
-
-
-  
 
 }
 .rock-img   
@@ -53,24 +49,26 @@ h1{
     background-color: none;
     width: 200px;
     height: 200px;
-    margin-left: auto;
-    margin-right: auto;
+   
 }
 
+.rock-img:hover{
+    opacity: 0.8;
+    
+}
 .choices{
-    color: rgb(69, 252, 255);
+    color: #08e4d4;
     font-size: 30px;
     
     font-family: 'Rubik Mono One', sans-serif;
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: #231f20;
+    
 }
 .versusText{  -webkit-text-stroke-width: 4px;
     -webkit-text-stroke-color: #231f20;
 
 
 
-    color: rgb(69, 252, 255);
+    color: #08e4d4;
     font-size: 80px;
     
     
@@ -85,20 +83,23 @@ h1{
     width: 250px;
 }
 .scores{
-    color: rgb(246, 238, 25);
-    font-size: 30px;
- 
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #231f20;
+    color: #ffec4c;
+    font-size: 40px;
+    text-align: center;
   
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Rubik Mono One', sans-serif;
+
 
 }
 #winMessage{
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: #231f20;
     color: rgb(220, 49, 194);
     margin-left: 0px;
-    font-size: 30px;
+    font-size: 50px;
     text-align: center;
- 
   
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    
+    font-family: 'Rubik Mono One', sans-serif;
 }

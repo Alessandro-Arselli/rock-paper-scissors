@@ -7,6 +7,7 @@ let playerScoreDiv = document.querySelector('#playerScore');
 let computerScoreDiv = document.querySelector('#computerScore');
 let playerScore =0;
 let computerScore =0;
+let scoreTxt = "Score:"
  
  //get the computers choice, randomly return rock paper or scisssors
  
@@ -97,7 +98,7 @@ function gameRun(playerSelection,computerSelection){
         computerSelectionImg.src = "paper.png";
         winMessageDiv.innerText = "You lose!";
         computerScore +=1;      
-        computerScoreDiv.innerText= "Computer: " + computerScore;
+        computerScoreDiv.innerText= scoreTxt+computerScore;
 
     
     }
@@ -107,7 +108,7 @@ function gameRun(playerSelection,computerSelection){
         computerSelectionImg.src = "scissors.png";
         winMessageDiv.innerText = "You win!";
         playerScore +=1
-        playerScoreDiv.innerText = "Player: " + playerScore;
+        playerScoreDiv.innerText = scoreTxt + playerScore;
     
     }
     else if(lowerPlayerSelection =="paper" && computerSelection =="Rock"){
@@ -116,7 +117,7 @@ function gameRun(playerSelection,computerSelection){
         computerSelectionImg.src = "rock.png";
         winMessageDiv.innerText = "You win!";
         playerScore +=1
-        playerScoreDiv.innerText = "Player: " + playerScore;
+        playerScoreDiv.innerText = scoreTxt + playerScore;
        
     }
     else if(lowerPlayerSelection =="paper" && computerSelection =="Paper"){
@@ -133,7 +134,7 @@ function gameRun(playerSelection,computerSelection){
 
         winMessageDiv.innerText = "You lose!";
         computerScore +=1;
-        computerScoreDiv.innerText= "Computer: " + computerScore;
+        computerScoreDiv.innerText= scoreTxt + computerScore;
 
       
     }
@@ -143,7 +144,7 @@ function gameRun(playerSelection,computerSelection){
         computerSelectionImg.src = "rock.png";
         winMessageDiv.innerText = "You lose!";
         computerScore +=1;
-        computerScoreDiv.innerText= "Computer: " + computerScore;
+        computerScoreDiv.innerText= scoreTxt + computerScore;
 
     }
     else if(lowerPlayerSelection =="scissors" && computerSelection =="Paper"){
@@ -152,7 +153,7 @@ function gameRun(playerSelection,computerSelection){
         computerSelectionImg.src = "paper.png";
         winMessageDiv.innerText = "You win!";
         playerScore +=1
-        playerScoreDiv.innerText = "Player: " + playerScore;
+        playerScoreDiv.innerText = scoreTxt + playerScore;
      
     }
     else if(lowerPlayerSelection =="scissors" && computerSelection =="Scissors"){
