@@ -10,7 +10,13 @@ let computerScore =0;
 let scoreTxt = "Score:"
  
  //get the computers choice, randomly return rock paper or scisssors
- 
+ function removeTransition(event)     
+{
+    if(event.propertyName !== 'font-size') return;
+    this.classList.remove('winMessageActive')
+
+ }
+    
  function getComputerChoice(){
     let choice;
     let rock = "Rock";
@@ -68,11 +74,14 @@ buttons.forEach(button => {
       playerChoice = buttonText(button);
       computerSelection = getComputerChoice();
       gameRun(playerChoice,computerSelection);
+      winMessageDiv.classList.add('winMessageActive');
       
+    
 
     });
   });
 
+  winMessageDiv.addEventListener("transitionend", removeTransition);
 
   // Add event listener to each button
 
@@ -88,12 +97,13 @@ function gameRun(playerSelection,computerSelection){
 
     if(lowerPlayerSelection =="rock" && computerSelection == "Rock")
     {  
+      
         winMessageDiv.innerText = "It's a tie!";
         playerSelectionImg.src = "rock.png"
         computerSelectionImg.src = "rock.png";
     }
     else if(lowerPlayerSelection =="rock" && computerSelection == "Paper"){
-
+        
         playerSelectionImg.src = "rock.png";
         computerSelectionImg.src = "paper.png";
         winMessageDiv.innerText = "You lose!";
@@ -103,7 +113,7 @@ function gameRun(playerSelection,computerSelection){
     
     }
     else if(lowerPlayerSelection =="rock" && computerSelection == "Scissors"){
-
+    
         playerSelectionImg.src = "rock.png"
         computerSelectionImg.src = "scissors.png";
         winMessageDiv.innerText = "You win!";
@@ -112,7 +122,7 @@ function gameRun(playerSelection,computerSelection){
     
     }
     else if(lowerPlayerSelection =="paper" && computerSelection =="Rock"){
-        
+  
         playerSelectionImg.src = "paper.png"
         computerSelectionImg.src = "rock.png";
         winMessageDiv.innerText = "You win!";
@@ -125,43 +135,48 @@ function gameRun(playerSelection,computerSelection){
         
         computerSelectionImg.src = "paper.png";
         winMessageDiv.innerText = "It's a tie!";
+ 
       
     }
     else if(lowerPlayerSelection =="paper" && computerSelection =="Scissors"){
-
+      
         playerSelectionImg.src = "paper.png"
         computerSelectionImg.src = "scissors.png";
 
         winMessageDiv.innerText = "You lose!";
+    
         computerScore +=1;
         computerScoreDiv.innerText= scoreTxt + computerScore;
 
       
     }
     else if(lowerPlayerSelection =="scissors" && computerSelection =="Rock"){
-
+     
         playerSelectionImg.src = "scissors.png"
         computerSelectionImg.src = "rock.png";
         winMessageDiv.innerText = "You lose!";
         computerScore +=1;
         computerScoreDiv.innerText= scoreTxt + computerScore;
+       
 
     }
     else if(lowerPlayerSelection =="scissors" && computerSelection =="Paper"){
-
+       
         playerSelectionImg.src = "scissors.png"
         computerSelectionImg.src = "paper.png";
         winMessageDiv.innerText = "You win!";
+      
         playerScore +=1
         playerScoreDiv.innerText = scoreTxt + playerScore;
      
     }
     else if(lowerPlayerSelection =="scissors" && computerSelection =="Scissors"){
-
+       
         playerSelectionImg.src = "scissors.png"
         computerSelectionImg.src = "scissors.png";
 
         winMessageDiv.innerText = "It's a tie!";
+     
       
     }
    

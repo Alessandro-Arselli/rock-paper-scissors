@@ -103,13 +103,18 @@ h1{
 
 
 }
-#winMessage{
+.winMessage{
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: #231f20;
     color: rgb(220, 49, 194);
     margin-left: 0px;
     font-size: 50px;
     text-align: center;
+    transition: 400ms;
   
     font-family: 'Rubik Mono One', sans-serif;
+}
+.winMessageActive{
+
+font-size: 70px;
 }
